@@ -328,7 +328,7 @@ is the number of dummy nodes to be added in the column.
 %-------------------------------------------------------------------------
 \section{Fast Object Localization}
 \label{sec:gridol}
-With the proposed MTD, we thus can transform the grid-based acceleration methods from pixel-level to SP-level to get efficient yet approximate segmentation results for various applications. Here, we focus on the object localization, \ie given an object mask in an image, we need to automatically localize the object in another image with possible huge deformation, scale variation, point view change and so on. We first present four SP-graphs as the input of MTD for arbitrary SP segmentation results. Then, we introduce how to use the MTD SP-grid to realize fast yet accuracy object localization with the original pixel-level method, \ie region covariance (RC) detection ~\cite{ol:tuzel06}.
+With the proposed MTD SP-grid method, we thus can transform the grid-based acceleration methods from pixel-level to SP-level to get efficient yet approximate segmentation results for various applications. Here, we focus on the object localization problem , \ie given an object mask in a image, we need to automatically localize the object in another scene with possible huge deformation, scale variation, point view change and so on. We first present four SP-graph construction methods as the input of MTD for arbitrary SP segmentation results. Then, we introduce how to use the MTD SP-grid to realize fast yet accuracy object localization with the original pixel-level method, \ie region covariance (RC) detection ~\cite{ol:tuzel06}.
 \subsection{SP-graph construction}
 \label{subsec:spgraph}
 For our approach, we have constructed four types of SP-graphs based on the given SP set $\mathcal{P}$ and the edge weight matrix $W_{\mathcal{P}}$:
@@ -348,7 +348,7 @@ where $N_x$ is the 4-connected neighborhood of pixel $x$ and $\mathcal{P}_{N_x}$
 \item $\epsilon$nn. Link $p$ and $q$ if  dif($p,q$)$<\epsilon$ ;
 \item $L_1$ graph. This type of graph is described in ~\cite{l1graph10} and here we introduce it shortly. For SP $p$ in $\mathcal{P}$, we calculate a color histogram with 8 bins per RGB channel $h_p$. For each $p$, we solve the following $\ell_1$ norm minimization to get a sparse representation $h_p$:
 \begin{equation}
-\min_{\alpha_p}||\alpha_p||_1,~~~~~~\mathrm{s.t.}~~~~~h_p=B_p\alpha_p,
+\min_{\alpha_p}||\alpha_p||_1,~~~~~~s.t.~~~~~h_p=B_p\alpha_p,
 \end{equation}
 where $B_p=[h_1,\hdots,h_{p-1},h_{p+1},\hdots,h_{\mathcal{P}},E]\in\mathds{R}^{24\times(24+|\mathcal{P}|-1)}$ and $E$ is the identity matrix. The graph is constructed based on the adjacent matrix
 \begin{equation*}
@@ -362,10 +362,10 @@ L(p,q)=
 \end{equation*}
 \end{itemize}
 
-We quantize the first 3 graphs into 5 levels, namely $k=1, k=5, k=10, k=15, k=25; n=1, n=2, n=3, n=4, n=6$ and $\epsilon=100, \epsilon=200, \epsilon=300, \epsilon=400, \epsilon=500$~\footnote{dif{$(p,q)$} is regularized to [0, 1000]}.
-\subsection{SP-grid based object localization}
-We extend pixel level region covariance~(RC) detection to SP level. Following the notation of ~\cite{ol:tuzel06},
-given the input image $I$, let $F\subset\mathbb{R}^{W\times H\times d}$ be the corresponding feature image:
+For the first 3 graphs, we quantize each of them into 5 levels, namely $k=1, k=5, k=10, k=15, k=25; n=1, n=2, n=3, n=4, n=6$ and $\epsilon=100, \epsilon=200, \epsilon=300, \epsilon=400, \epsilon=500$ \footnote{dif{$(p,q)$} is regularized to [0, 1000]}.
+\subsection{MTD SP-grid based object localization}
+We extend the pixel level region covariance (RC) detection to superpixel level. Following the notation of ~\cite{ol:tuzel06},
+given the input image $I$ and let $F\subset\mathbb{R}^{W\times H\times d}$ be the corresponding feature image:
 \begin{equation}
 F(x,y) = \phi(I,x,y),
 \end{equation}
@@ -390,14 +390,16 @@ where $\mathcal{V}_{uv}$ denotes the corresponding image region of \#$(u,v)$ sup
 \label{sec:exp}
 We validate the effective and efficiency of our MTD SP-grid method via object localization experiments. To get the most sophisticated analysis and the fairest comparison, we first propose to use differential
 evolution (DE) ~\cite{DE97} to get the best and fixed parameters for all methods. Then, we demonstrate that the topological discrepancy do decrease during the optimization process, which also leads to the best accuracy localization result. We also compare the localization performance considering different graph construction methods and show that $\epsilon$nn based SP-graph can achieve best performance. Finally, we compare and analyse the localization performance based on pixel-level, SP-level and our MTD SP-grid, respectively.
-\subsection{Experiment setting}
+\subsection{Experiment settings}
 We construct our MTD SP-grid based on the SLIC ~\cite{sp_ref:slic12} and EGS ~\cite{seg_ref:felz04} and denote the corresponding object localization methods as MTD-SLIC and MTD-EGS. We choose these two methods mainly due to its simplicity and efficiency, and the MTD can be readily applied to arbitrary SPs. Besides, with different SP-graphs introduced in subsection~\ref{subsec:spgraph}, we can get many variants of MTD-SLIC and MTD-EGS, as discussed in subsection~\ref{subsec:spgraphex}.
 
+\noindent\textbf{Dataset.}
 Our test data mainly comes from MFC dataset ~\cite{coseg_ref:mfc12} containing 14 scenes each of which has 15 to 20 images with huge foreground changes including deformation, scale variation, rotation and so on. Besides, to further evaluate our methods, we prepare 3 extra scenes whose images are all grabbed from the Flickr website to form an extended-MFC dateset. The total number of images in extended-MFC are 341. For a single foreground object in one image, we search the same foreground in other images of the same scene. Since one image may contain multiple foreground objects, the actual number of query cases are around 2600.
 
-We develop five object localization methods as baselines based on state-of-the-art representations: pixel-level ~\cite{ol:tuzel06}, near-regular SPs, \eg TurboPixel ~\cite{sp_ref:turbosp09}, and the regular SPs including SEEDS ~\cite{sp_seeds}, SPLattice ~\cite{sp_ref:splattice08} and MCG ~\cite{sp-grid} that also derives two variants with different SP methods, \ie MCG-EGS and MCG-SLIC. Specifically, as introduced in section \ref{sec:gridol}, we can directly use the RC ~\cite{ol:tuzel06} descriptor for the regular SPs, \ie SEEDS, SPLattice and MCG, to localize the object. For near-regular SPs, \ie TurboPixel ~\cite{sp_ref:turbosp09}, we use its initial uniformly placed seeds indices to approximate their virtual grid indices and realize object localization with the same RC descriptor used above. Note that, strictly speaking, near-regular SPs cannot support the RC-based searching if without the approximation.
+\noindent\textbf{Baseline.}
+We develop five object localization methods as baselines based on state-of-the-art representations: pixel-level ~\cite{ol:tuzel06}, near-regular SPs, \eg TurboPixel ~\cite{sp_ref:turbosp09}, and the regular SPs including SEEDS ~\cite{sp_seeds}, SPLattice ~\cite{sp_ref:splattice08} and SPGrid ~\cite{sp-grid} that also derives two variants with different SP methods, \ie SPGrid-EGS and SPGrid-SLIC. Specifically, as introduced in section \ref{sec:gridol}, we can directly use the RC ~\cite{ol:tuzel06} descriptor for the regular SPs, \ie SEEDS, SPLattice and SPGrid, to localize the object. For near-regular SPs, \ie TurboPixel ~\cite{sp_ref:turbosp09}, we use its initial uniformly placed seeds indices to approximate their virtual grid indices and realize object localization with the same RC descriptor used above. Note that, strictly speaking, near-regular SPs cannot support the RC-based searching if without the approximation.
 
-We evaluate all methods with the pixel-level segmentation ground truth instead of bounding box, which is more accurate and fairer for both comparison and analysis. We use $F1$-measure, precision and recall as the metrics being commonly used in object localization.
+\noindent\textbf{Metrics.} We evaluate all methods with the pixel-level segmentation ground truth instead of bounding box, which is more accurate and fairer for both comparison and analysis. We use $F1$-measure, precision and recall as the metrics being commonly used in object localization.
 
 \subsection{Parameters tuning}
 \label{subsec:paratune}
@@ -444,10 +446,12 @@ Since each method have several parameters that need to be set, \eg Tab.~\ref{tab
 \includegraphics[width=\linewidth]{figs/params_egs}
 \caption{Best parameters for EGS.}
 \end{figure}
-\subsection{Validation and analysis}
+\subsection{Validation and analysis of MTD}
 
+\textbf{MTD convergence.}
 As we apply dynamic programming to optimize the topological discrepancy, the MTD method is theocratically converged. Fig.~\ref{fig:pt} (a) demonstrates this convergence property in practice. To be a general analysis, we randomly select 10 images, and record all the intermediate discrepancy values during the minimization. As the iteration number and discrepancy values may differ largely for different images, we normalize both values of each image into $[0,100]$. The average of normalized discrepancy values are computed and plotted against the normalized iteration number. As shown, the discrepancy value is monotonically decreasing versus the iteration number. What's more, the discrepancy value drops rapidly in the first 40 iterations, and almost converges at the 60-th iteration.
 
+\noindent \textbf{MTD effectiveness in localization.}
 In this experiment, we exploit the relationship between the discrepancy value (Eq.~(\ref{eq:Gtd})) and the $F_1$- measure in object localization. Specifically, during the MTD minimization, we perform object localization on each intermediate SP-grid, and measures the corresponding discrepancy value and $F_1$-measure. Again, the discrepancy values from 10 query cases are normalized, and the average $F_1$ measure is plotted against the average regularized discrepancy in Fig.~\ref{fig:pt} (b). The $F_1$-measure increases rapidly when the discrepancy value decreases to around 30 (regularized value), and improves slightly until the discrepancy value converges.
 
 \begin{figure}
@@ -467,7 +471,7 @@ In this experiment, we exploit the relationship between the discrepancy value (E
 %\subsection{Comparison between different graph type}
 %Figure~\ref{fig:f-1} plots the distribution of $F_1$ measures over all the query cases. The mark ``+'' represents outlier. The figure shows the advantage of our four MTD variants in relative to the four state-of-the-art methods. What's more, MTD $k$nn yields the best quality among the four graphs used in our MTD framework.
 
-\subsection{Comparison of MTD variants}
+\subsection{Comparison between different variants of our method}
 \label{subsec:spgraphex}
 In this experiment, we evaluate the localization performance of variants of MTD-SLIC and MTD-EGS with different SP-graphs. As introduced in subsection~\ref{subsec:spgraph}, we can build eight variants via four SP-graphs, including spatial $n$-connections ($n$-con), $k$nn, $\epsilon$nn, and $L_1$-graph based on both MTD-SLIC and MTD-EGS. For each graph type, we quantize the connection parameter into 5 different levels. To be specific,  we choose $k \in [1,20]$ for  $k$nn, $n \in [1,5]$ for $n$-con, and regularize the similarity into [0, 1000] for $\epsilon$nn. Thus, we obtain 32 sub-variants in total, as shown in horizontal axis of Fig.~\ref{fig:f-1}.
 
@@ -482,48 +486,46 @@ When parameters are optimized via DE and lead to results in Fig.~\ref{fig:comp},
 \caption{$F_1$-measures of 32 sub-variants of MTD with 1000 random parameter groups.}\label{fig:f-1}
 \end{figure*}
 
-\subsection{Comparison with state-of-the-arts}
+\subsection{Comparison with state-of-the-art methods}
 \label{subsec:compquant}
 We now make comparison with state-of-the-art methods with the analysis of metrics, \eg $F1$-measure, precision, recall and timing, discussion of robustness to the change of scale, rotation and image quality as well as the visual comparison for subjective evaluation.
 %Since each method has different parameters  to tune, to make a fair comparison, we determined the parameters via automatic parameter training on a given training set, and apply the best parameter over the whole test set. For generality, the SP number is taken as a parameter which should be tuned. Here, we employ differential evolution (DE) ~\cite{DE97} for parameter training. A few query cases in each image folder are selected to form the training set, which contains all together 538 query cases. We assume the population size and generation number (the two parameters of DE) are the same for all the training. Empirically, the population size is set as 150 and the generation number is 80 in our experiments.
-\subsubsection{Quantitative measures and timing}
-We report quantitative measures (including precision, recall and $F_1$-measure) and timings for different methods in Tab.~\ref{tab:allresults}. Our MTD variants are based on EGS SP method. The precision, recall, and $F_1$-measures are reported as the average value across all the query cases excluding the cases for tuning parameters. We can see that the all SP-level methods have higher precision and $F1$-measure than pixel-level RC, although the latter has a high recall. Our MTD variants outperform SEEDS, TurboPixel, SPLattice, and MCG in terms of all three metrics. In particular, MTD based on graphs, \ie $L1$,$k$nn,$n$-con achieve the best performance on precision, recall and $F1$-measure, respectively.
+\subsubsection{Quantitative measures and timings}
+We report quantitative measures (including precision, recall and $F_1$-measure) and timings for different methods in Tab.~\ref{tab:allresults}. Our MTD variants are based on EGS SP method. The precision, recall, and $F_1$-measures are reported as the average value across all the query cases excluding the cases for tuning parameters. We can see that the all SP-level methods have higher precision and $F1$-measure than pixel-level RC, although the latter has a high recall. Our MTD variants outperform SEEDS, TurboPixel, SPLattice, and SPGrid in terms of all three metrics. In particular, MTD based on graphs, \ie $L1$,$k$nn,$n$-con achieve the best performance on precision, recall and $F1$-measure, respectively.
 
 The timing performance is measured from three aspects, \ie the superpixel generation and gridization time (SP-Time), object matching time (via brute-force searching), and precomputation time (only invoked in SPLattice). In comparison, although SP level methods have to precalculate SP, the total cost is still less than pixel level method. Besides, our four MTD variants are all efficient, achieving comparable or better timing performance than the state-of-the-art methods. The fastest one is MTD with $k$nn ($k=3$), taking 0.26 seconds on average.
 
-%\subsubsection{Further $F_1$-measure analysis}
-%\label{subsec:compf1}
+\subsubsection{Further $F_1$-measure analysis}
+\label{subsec:compf1}
 \begin{figure*}
 \includegraphics[width=\linewidth]{figs/de.eps}
 \caption{$F1$-measures of 32 sub-variants of MTD and 5 state-of-the-art methods with DE optimized parameters.}
 \label{fig:comp}
 \end{figure*}
-The right part of Fig.~\ref{fig:comp} plots the $F_1$-measure of all object localization methods. As for state-of-the-art methods, our previous MCG achieves similar performance to SEEDS (around 0.53). It is worthy pointing out that MCG-EGS is slightly better than MCG-SLIC, which is consistent with MTD variants. In comparison, TurboPixel gets a lower average $F_1$-measure (0.49), followed by SPLattice (0.45 on average). More importantly,  our MTD variants outperforms all the above methods with apparent improvements. The maximum $F_1$-measure is reported to be 0.56 and 0.60 for $n$-con MTD-SLIC and $n$-con MTD-EGS respectively.
+The right part of Fig.~\ref{fig:comp} plots the $F_1$-measure of all object localization methods. As for state-of-the-art methods, our previous SPGrid achieves similar performance to SEEDS (around 0.53). It is worthy pointing out that SPGrid-EGS is slightly better than SPGrid-SLIC, which is consistent with MTD variants. In comparison, TurboPixel gets a lower average $F_1$-measure (0.49), followed by SPLattice (0.45 on average). More importantly,  our MTD variants outperforms all the above methods with apparent improvements. The maximum $F_1$-measure is reported to be 0.56 and 0.60 for $n$-con MTD-SLIC and $n$-con MTD-EGS respectively.
 
-\subsubsection{Robustness}
+\subsubsection{Robustness to image scaling, rotation and noise.}
 We then evaluate the robustness of all methods to three disturbing factors, \ie noise, scale variation and rotation. For each factor, we consider 10 disturbing levels w.r.t. additive Gaussian noise variance, scale value and rotation degree, respectively, as showed in the horizontal axis of Fig.\ref{fig:robust}. Thus, we can build 30 datasets in total for three factors by transforming all the test cases w.r.t different disturbing levels. Then, we evaluate all methods on each dataset with the DE optimized parameters used in Fig.~\ref{fig:comp} and calculate the average $F1$-measure, as showed in Fig.~\ref{fig:robust}. Note that, since MTD variants with different graph types have similar performance, we calculate the average $F1$-measure of MTD-SLIC and MTD-EGS across all graphs,respectively.
 
 As demonstrated in Fig.~\ref{fig:robust}, pixel-level RC is highly sensitive to noise and image scaling, and it drops quickly and consistently when the noise variance increases or the scaling factor decreases. TurboPixel, SPLattice, and SEEDS have similar performance when considering image noise. However, TurboPixel and SPLattice are sensitive to image rotation and have low $F_1$-measure similar to that of pixel-level RC. It is interesting to point out that SEEDS are robust to image scaling and rotation, and it have even improved $F_1$-measure when the scaling factor drops from 0.78 to 0.56.
 
-In comparison, our MTD methods and previous MCG methods are more stable under varying image scaling factors, rotation, and noise corruptions. Futhermore, MTD-EGS achieves the best performance.
+In comparison, our MTD methods and previous SPGrid methods are more stable under varying image scaling factors, rotation, and noise corruptions. Futhermore, MTD-EGS achieves the best performance.
 \begin{figure*}[ht]
 \centering
 \includegraphics[width=0.95\linewidth]{figs/robust.eps}
-\caption{Robustness to scaling, rotation and noise for pixel-level RC, SPLattic, SEEDS, TurboPixle, MCG and our two MTD variants,\ie MTD-SLIC and MTD-EGS.}\label{fig:robust}
+\caption{Robustness to scaling, rotation and noise for pixel-level RC, SPLattic, SEEDS, TurboPixle, SPGrid and our two MTD variants,\ie MTD-SLIC and MTD-EGS.}\label{fig:robust}
 \end{figure*}
 
-\subsubsection{More results} 
-The visual comparison among different methods is presented in Fig.~\ref{fig:visual}. Note that, the results come from previous quantitative evaluation in subsection~\ref{subsec:compquant} with optimal parameters. For our MTD methods, as MTD with different SP-graphs have similar performance, we just show the results of MTD-SLIC and MTD-EGS based on $n$-con graph. Both the $F_1$-measure and the whole timing are marked in each result. The leftmost of Fig.~\ref{fig:visual} shows the inputs of each case, \ie an image with a mask indicating the target object. The rest parts of Fig.~\ref{fig:visual} shows the retrieval results on another image with different methods.
+\subsubsection{Visual comparison} The visual comparison among different methods is presented in Fig.~\ref{fig:visual}. Note that, the results come from previous quantitative evaluation in subsection~\ref{subsec:compquant} with optimal parameters. For our MTD methods, as MTD with different SP-graphs have similar performance, we just show the results of MTD-SLIC and MTD-EGS based on $n$-con graph. Both the $F_1$-measure and the whole timing are marked in each result. The leftmost of Fig.~\ref{fig:visual} shows the inputs of each case, \ie an image with a mask indicating the target object. The rest parts of Fig.~\ref{fig:visual} shows the retrieval results on another image with different methods.
 
-Pixel-based RC returns rectangular matched regions, which covers only a part of objects under retrieval. SPLattice, TurboPixel, SEEDS have similar localization results in many cases, yet they are not able to well grasp the object boundary. MCG-SLIC and MCG-EGS can capture most of the object boundary with some background included and foreground lost. Obviously, MTD methods (both SLIC-based and EGS-based) improve our previous MCG methods. Let us take the last third and fourth image for example. The man can be identified with a complete boundary using MTD methods, yet miss some parts using MCG. The similar performance is shown in the dog case. We can also see that MTD-EGS gets more complete object boundaries than MTD-SLIC, for instance, the eagle in the last image.
+Pixel-based RC returns rectangular matched regions, which covers only a part of objects under retrieval. SPLattice, TurboPixel, SEEDS have similar localization results in many cases, yet they are not able to well grasp the object boundary. SPGrid-SLIC and SPGrid-EGS can capture most of the object boundary with some background included and foreground lost. Obviously, MTD methods (both SLIC-based and EGS-based) improve our previous SPGrid methods. Let us take the last third and fourth image for example. The man can be identified with a complete boundary using MTD methods, yet miss some parts using SPGrid. The similar performance is shown in the dog case. We can also see that MTD-EGS gets more complete object boundaries than MTD-SLIC, for instance, the eagle in the last image.
 \begin{figure*}[]
 \centering
 \includegraphics[width=\linewidth]{figs/visual.eps}
-\caption{ 15 results of 8 methods. QI and QM represent the query image and query mask. Our MTD-SLIC and MTD-EGS is based on...}\label{fig:visual}
+\caption{Visual comparison between different methods.}\label{fig:visual}
 \end{figure*}
 
 \begin{table*} [ht]
-\caption{Average accuracy and speed of object localization using region covariance ~\cite{ol:tuzel06} on our extended MFC dataset.} \label{tab:allresults} \vspace{-0.3cm}
 \begin{center}
 \begin{tabular}{|l||c|c|c|c|c|c|c|}
 \hline
@@ -537,9 +539,9 @@ MTD $\epsilon$nn 400 & 0.61 & 0.58 & 0.59 & -    & 0.06 & 0.22 & 0.28    \\
 \hline				
 MTD $L_1$-graph      & 0.65 & 0.55 & 0.58 & -    & 0.06 & 0.92 & 0.98    \\
 \hline				
-MCG-SLIC       & 0.61 & 0.48 & 0.53 & -    & 0.16 & 0.24 & 0.40    \\
+SPGrid-SLIC       & 0.61 & 0.48 & 0.53 & -    & 0.16 & 0.24 & 0.40    \\
 \hline				
-MCG-EGS        & 0.64 & 0.50 & 0.54 & -    & 0.06 & 0.25 & 0.31    \\
+SPGrid-EGS        & 0.64 & 0.50 & 0.54 & -    & 0.06 & 0.25 & 0.31    \\
 \hline
 SEEDS                & 0.62 & 0.50 & 0.53 & -    & 0.10 & 0.25 & 0.35    \\
 \hline				
@@ -551,6 +553,7 @@ Pixel                & 0.40 & 0.61 & 0.42 & -    & -    & 7.38 & 7.38    \\
 \hline
 \end{tabular}
 \end{center}
+\caption{Average accuracy and speed of object localization using region covariance ~\cite{ol:tuzel06} on our extended MFC dataset.} \label{tab:allresults} \vspace{-0.3cm}
 \end{table*}
 %-------------------------------------------------------------------------
 \section{Conclusion and Future Work}
