@@ -109,7 +109,7 @@ Additionally, few existing superpixel generation methods discuss how to directly
 \fi
 
 \subsection{Object detection and localization}
-Sliding window search is a classical way and has been well studied in object detection and localization ~\cite{learning_localize,ol_ref:Gonzalez_15,ol_ref:Zhang16}. Most sliding window based algorithms seek an optimal bounding box to localize the query object in the target image, by minimizing some proper distance function. Recently, region covariance (RC) searching ~\cite{ol:tuzel06} and efficient subwindow search (ESS) ~\cite{ol_ref:ess09,ol_ref:esr09,ol_ref:fastess09} are two types of successful methods in quickly detecting and localizing complex objects in large-scale images. In our experiments, we have tested the proposed approach and several state-of-the-art pixel- and superpixel-level alternatives in the framework of RC searching.
+Given an target object whose representation is supervised learned~\cite{ol:Caicedo15,ol:Cinbis16,ol:Lu15,ol:wang15,learning_localize,ol_ref:Gonzalez_15,ol_ref:Zhang16} or manually set~\cite{ol:tuzel06,ol:shen14,sp-grid}, object localization is to get accurate position of the same object on other images with various interferences, \ie deformation, rotation, motion blur, scale variation and so on. To do this, sliding window search is usually used to evaluate all possible windows to seek an optimal bounding box to localize the query object in the target image, by minimizing some proper distance function. Recently, some novel search strategies are proposed to avoid this exhaustion operation~\cite{ol:tuzel06,ol_ref:ess09,ol_ref:esr09,ol_ref:fastess09,ol:Lu15,ol:Caicedo15,ol_ref:Gonzalez_15}. Among these methods, region covariance (RC) searching ~\cite{ol:tuzel06} and efficient subwindow search (ESS) ~\cite{ol_ref:ess09,ol_ref:esr09,ol_ref:fastess09} are two types of successful methods in quickly detecting and localizing complex objects in large-scale images. In our experiments, we have tested the proposed approach and several state-of-the-art pixel- and superpixel-level alternatives in the framework of RC searching.
 
 
 %-------------------------------------------------------------------------
@@ -490,7 +490,7 @@ We report quantitative measures (including precision, recall and $F_1$-measure) 
 The timing performance is measured from three aspects, \ie the superpixel generation and gridization time (SP-Time), object matching time (via brute-force searching), and precomputation time (only invoked in SPLattice). In comparison, although SP level methods have to precalculate SP, the total cost is still less than pixel level method. Besides, our four MTD variants are all efficient, achieving comparable or better timing performance than the state-of-the-art methods. The fastest one is MTD with $k$nn ($k=3$), taking 0.26 seconds on average.
 
 %\subsubsection{Further $F_1$-measure analysis}
-%\label{subsec:compf1}
+sp-grid%\label{subsec:compf1}
 \begin{figure*}
 \includegraphics[width=\linewidth]{figs/de.eps}
 \caption{\small $F1$-measures of 32 sub-variants of MTD and 5 state-of-the-art methods with DE optimized parameters.}
