@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.23)  9 JUL 2016 11:55
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.23)  10 JUL 2016 09:27
 entering extended mode
 **C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/grid_mtd_gq.tex
 (C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/grid_mtd_gq.tex
@@ -459,6 +459,11 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 70.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <14> not available
 (Font)              Font shape `OT1/phv/b/sc' tried instead on input line 70.
+
+Underfull \hbox (badness 1460) in paragraph at lines 75--78
+\OT1/ppl/m/n/12 in solv-ing vari-a-tion-al and low-level vi-sion
+ []
+
 Package epstopdf Info: Source file: <figs/figure1_v4.eps>
 (epstopdf)                    date: 2016-07-09 09:16:03
 (epstopdf)                    size: 11851280 bytes
@@ -469,7 +474,6 @@ Package epstopdf Info: Source file: <figs/figure1_v4.eps>
 ed-to.pdf figs/figure1_v4.eps>
 (epstopdf)             \includegraphics on input line 82.
 Package epstopdf Info: Output file is already uptodate.
-
 <figs/figure1_v4-eps-converted-to.pdf, id=1, 696.6025pt x 467.7475pt>
 File: figs/figure1_v4-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -481,6 +485,8 @@ e 82.
 
 
 ]
+Underfull \vbox (badness 1596) has occurred while \output is active []
+
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 98.
  [2 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/figure1_v4-eps-converted-to
@@ -538,21 +544,21 @@ Package epstopdf Info: Source file: <figs/figure2_new.eps>
 (epstopdf)                    size: 48939 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/figure2_new-eps-conver
 ted-to.pdf figs/figure2_new.eps>
-(epstopdf)             \includegraphics on input line 130.
+(epstopdf)             \includegraphics on input line 128.
 Package epstopdf Info: Output file is already uptodate.
-<figs/figure2_new-eps-converted-to.pdf, id=40, 208.78pt x 181.67876pt>
+<figs/figure2_new-eps-converted-to.pdf, id=41, 208.78pt x 181.67876pt>
 File: figs/figure2_new-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figs/figure2_new-eps-converted-to.pdf>
 Package pdftex.def Info: figs/figure2_new-eps-converted-to.pdf used on input li
-ne 130.
+ne 128.
 (pdftex.def)             Requested size: 252.0pt x 219.30246pt.
  [3]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 143.
+LaTeX Font Warning: Command \small invalid in math mode on input line 141.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
  \OT1/phv/b/sc/14 4 Min-i-miz-ing Grid Topo-log-i-cal
  []
 
@@ -561,16 +567,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--167
 
 Package amsmath Warning: Foreign command \atop;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 196.
+(amsmath)                 on input line 194.
 
 
-Overfull \hbox (10.23453pt too wide) detected at line 210
+Overfull \hbox (10.23453pt too wide) detected at line 208
 \OML/cmm/m/it/12 W[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; q\OT1/cmr/m/n/12 ) = [
 ]
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 233.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 231.
 Package epstopdf Info: Source file: <figs/bg.eps>
 (epstopdf)                    date: 2016-07-09 10:20:02
 (epstopdf)                    size: 3350485 bytes
@@ -579,53 +585,52 @@ Package epstopdf Info: Source file: <figs/bg.eps>
 (epstopdf)                    size: 65038 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/bg-eps-converted-to.pd
 f figs/bg.eps>
-(epstopdf)             \includegraphics on input line 247.
+(epstopdf)             \includegraphics on input line 245.
 Package epstopdf Info: Output file is already uptodate.
 <figs/bg-eps-converted-to.pdf, id=63, 247.92625pt x 185.69376pt>
 File: figs/bg-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figs/bg-eps-converted-to.pdf>
-Package pdftex.def Info: figs/bg-eps-converted-to.pdf used on input line 247.
+Package pdftex.def Info: figs/bg-eps-converted-to.pdf used on input line 245.
 (pdftex.def)             Requested size: 252.0pt x 188.74776pt.
- [5]
-Overfull \hbox (17.27217pt too wide) detected at line 265
+ [5 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/bg-eps-converted-to.pdf>]
+Overfull \hbox (17.27217pt too wide) detected at line 263
 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; k; n\OT1/cmr/m/n/12 ) = [] []\OML/cmm/m/
 it/12 ;
  []
 
 
-Underfull \hbox (badness 3291) in paragraph at lines 313--314
+Underfull \hbox (badness 3291) in paragraph at lines 311--312
 [] []\OT1/ppl/m/n/10 Compute $\OT1/cmr/m/n/10 S(\OML/cmm/m/it/10 k; n\OT1/cmr/m
 /n/10 )$ \OT1/ppl/m/n/10 and $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k; n\OT1/cmr/
 m/n/10 )$ \OT1/ppl/m/n/10 us-ing E-
  []
 
-[6 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/bg-eps-converted-to.pdf>]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 353.
+[6]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 351.
 
-
-(C:\CTEX\UserData\tex\latex\dstroke\udsrom.fd
+ (C:\CTEX\UserData\tex\latex\dstroke\udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-Overfull \hbox (6.42776pt too wide) detected at line 362
+Overfull \hbox (6.42776pt too wide) detected at line 360
 \OML/cmm/m/it/12 L\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; q\OT1/cmr/m/n/12 ) = []
  []
 
 [7]
-Underfull \hbox (badness 1881) in paragraph at lines 396--397
+Underfull \hbox (badness 1881) in paragraph at lines 394--395
 []\OT1/ppl/m/n/12 Our test da-ta main-ly comes from M-FC
  []
 
 
 LaTeX Warning: Reference `tab:slicDETrain' on page 8 undefined on input line 40
-4.
+2.
 
 
-LaTeX Warning: Reference `tab:egsDETrain' on page 8 undefined on input line 404
+LaTeX Warning: Reference `tab:egsDETrain' on page 8 undefined on input line 402
 .
 
 
-Overfull \hbox (4.44519pt too wide) in paragraph at lines 412--436
+Overfull \hbox (4.44519pt too wide) in paragraph at lines 410--434
  [][] 
  []
 
@@ -633,16 +638,16 @@ Overfull \hbox (4.44519pt too wide) in paragraph at lines 412--436
 File: figs/params_slic.pdf Graphic file (type pdf)
 
 <use figs/params_slic.pdf>
-Package pdftex.def Info: figs/params_slic.pdf used on input line 439.
+Package pdftex.def Info: figs/params_slic.pdf used on input line 437.
 (pdftex.def)             Requested size: 252.0pt x 198.65334pt.
 
 <figs/params_egs.pdf, id=111, 352.0653pt x 279.0425pt>
 File: figs/params_egs.pdf Graphic file (type pdf)
 
 <use figs/params_egs.pdf>
-Package pdftex.def Info: figs/params_egs.pdf used on input line 444.
+Package pdftex.def Info: figs/params_egs.pdf used on input line 442.
 (pdftex.def)             Requested size: 252.0pt x 199.73102pt.
- [8]
+ [8 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/params_slic.pdf>]
 Package epstopdf Info: Source file: <figs/converge.eps>
 (epstopdf)                    date: 2016-07-09 09:16:03
 (epstopdf)                    size: 2041050 bytes
@@ -651,15 +656,15 @@ Package epstopdf Info: Source file: <figs/converge.eps>
 (epstopdf)                    size: 7469 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/converge-eps-converted
 -to.pdf figs/converge.eps>
-(epstopdf)             \includegraphics on input line 455.
+(epstopdf)             \includegraphics on input line 453.
 Package epstopdf Info: Output file is already uptodate.
 
-<figs/converge-eps-converted-to.pdf, id=115, 377.41pt x 297.11pt>
+<figs/converge-eps-converted-to.pdf, id=128, 377.41pt x 297.11pt>
 File: figs/converge-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figs/converge-eps-converted-to.pdf>
 Package pdftex.def Info: figs/converge-eps-converted-to.pdf used on input line 
-455.
+453.
 (pdftex.def)             Requested size: 226.79846pt x 178.54391pt.
 Package epstopdf Info: Source file: <figs/eng_vs_f1.eps>
 (epstopdf)                    date: 2016-07-09 09:16:03
@@ -669,24 +674,20 @@ Package epstopdf Info: Source file: <figs/eng_vs_f1.eps>
 (epstopdf)                    size: 7345 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/eng_vs_f1-eps-converte
 d-to.pdf figs/eng_vs_f1.eps>
-(epstopdf)             \includegraphics on input line 459.
+(epstopdf)             \includegraphics on input line 457.
 Package epstopdf Info: Output file is already uptodate.
 
-<figs/eng_vs_f1-eps-converted-to.pdf, id=116, 373.395pt x 288.07625pt>
+<figs/eng_vs_f1-eps-converted-to.pdf, id=129, 373.395pt x 288.07625pt>
 File: figs/eng_vs_f1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figs/eng_vs_f1-eps-converted-to.pdf>
 Package pdftex.def Info: figs/eng_vs_f1-eps-converted-to.pdf used on input line
- 459.
+ 457.
 (pdftex.def)             Requested size: 226.79846pt x 174.97458pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/params_slic.pdf> <C:/Users/
-Wan/Desktop/TPAMI-MTD/TestCowork/figs/params_egs.pdf> <C:/Users/Wan/Desktop/TPA
-MI-MTD/TestCowork/figs/converge-eps-converted-to.pdf> <C:/Users/Wan/Desktop/TPA
-MI-MTD/TestCowork/figs/eng_vs_f1-eps-converted-to.pdf>]
-Underfull \hbox (badness 1762) in paragraph at lines 476--477
+ [9 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/params_egs.pdf> <C:/Users/W
+an/Desktop/TPAMI-MTD/TestCowork/figs/converge-eps-converted-to.pdf> <C:/Users/W
+an/Desktop/TPAMI-MTD/TestCowork/figs/eng_vs_f1-eps-converted-to.pdf>]
+Underfull \hbox (badness 1762) in paragraph at lines 474--475
 []\OT1/ppl/m/n/12 As showed in Fig. 7[], for each type of
  []
 
@@ -698,16 +699,15 @@ Package epstopdf Info: Source file: <figs/random-param.eps>
 (epstopdf)                    size: 19227 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/random-param-eps-conve
 rted-to.pdf figs/random-param.eps>
-(epstopdf)             \includegraphics on input line 481.
+(epstopdf)             \includegraphics on input line 479.
 Package epstopdf Info: Output file is already uptodate.
 <figs/random-param-eps-converted-to.pdf, id=158, 1158.3275pt x 452.69125pt>
 File: figs/random-param-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figs/random-param-eps-converted-to.pdf>
 Package pdftex.def Info: figs/random-param-eps-converted-to.pdf used on input l
-ine 481.
+ine 479.
 (pdftex.def)             Requested size: 464.39685pt x 181.49464pt.
- [10]
 Package epstopdf Info: Source file: <figs/de.eps>
 (epstopdf)                    date: 2016-07-09 09:16:03
 (epstopdf)                    size: 446217 bytes
@@ -716,21 +716,24 @@ Package epstopdf Info: Source file: <figs/de.eps>
 (epstopdf)                    size: 85135 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/de-eps-converted-to.pd
 f figs/de.eps>
-(epstopdf)             \includegraphics on input line 497.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
-<figs/de-eps-converted-to.pdf, id=162, 1430.34375pt x 498.86375pt>
+<figs/de-eps-converted-to.pdf, id=159, 1430.34375pt x 498.86375pt>
 File: figs/de-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figs/de-eps-converted-to.pdf>
-Package pdftex.def Info: figs/de-eps-converted-to.pdf used on input line 497.
+Package pdftex.def Info: figs/de-eps-converted-to.pdf used on input line 495.
 (pdftex.def)             Requested size: 516.0pt x 179.9638pt.
 
-Underfull \hbox (badness 2662) in paragraph at lines 501--502
+Underfull \hbox (badness 2662) in paragraph at lines 499--500
 []\OT1/ppl/m/n/12 The right part of Fig. 8[] plot-s the $\OML/cmm/m/it/12 F[]$\
 OT1/ppl/m/n/12 -
  []
 
+[10] [11 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/random-param-eps-conve
+rted-to.pdf> <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/de-eps-converted-t
+o.pdf>]
 Package epstopdf Info: Source file: <figs/robust.eps>
 (epstopdf)                    date: 2016-07-09 09:16:04
 (epstopdf)                    size: 2323070 bytes
@@ -739,23 +742,19 @@ Package epstopdf Info: Source file: <figs/robust.eps>
 (epstopdf)                    size: 39087 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/robust-eps-converted-t
 o.pdf figs/robust.eps>
-(epstopdf)             \includegraphics on input line 511.
+(epstopdf)             \includegraphics on input line 509.
 Package epstopdf Info: Output file is already uptodate.
-<figs/robust-eps-converted-to.pdf, id=163, 607.26875pt x 193.72375pt>
+ <figs/robust-eps-converted-to.pdf, id=189, 607.26875pt x 193.72375pt>
 File: figs/robust-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figs/robust-eps-converted-to.pdf>
-Package pdftex.def Info: figs/robust-eps-converted-to.pdf used on input line 51
-1.
+Package pdftex.def Info: figs/robust-eps-converted-to.pdf used on input line 50
+9.
 (pdftex.def)             Requested size: 490.19843pt x 156.38033pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/random-param-eps-converted
--to.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 519.
+               Default added (so using `tbp') on input line 517.
 
 Package epstopdf Info: Source file: <figs/visual.eps>
 (epstopdf)                    date: 2016-07-09 09:16:04
@@ -765,28 +764,29 @@ Package epstopdf Info: Source file: <figs/visual.eps>
 (epstopdf)                    size: 648435 bytes
 (epstopdf)             Command: <epstopdf --outfile=figs/visual-eps-converted-t
 o.pdf figs/visual.eps>
-(epstopdf)             \includegraphics on input line 521.
+(epstopdf)             \includegraphics on input line 519.
 Package epstopdf Info: Output file is already uptodate.
-<figs/visual-eps-converted-to.pdf, id=188, 497.86pt x 594.22pt>
+<figs/visual-eps-converted-to.pdf, id=190, 497.86pt x 594.22pt>
 File: figs/visual-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figs/visual-eps-converted-to.pdf>
-Package pdftex.def Info: figs/visual-eps-converted-to.pdf used on input line 52
-1.
+Package pdftex.def Info: figs/visual-eps-converted-to.pdf used on input line 51
+9.
 (pdftex.def)             Requested size: 516.0pt x 615.92508pt.
 
 (C:\Users\Wan\Desktop\TPAMI-MTD\TestCowork\grid_mtd_gq.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2689) has occurred while \output is active []
 
- [12 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/de-eps-converted-to.pdf> <
-C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/robust-eps-converted-to.pdf>] [1
-3 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/visual-eps-converted-to.pdf>]
+ [12]
 Missing character: There is no ¨ in font pplr7t!
 Missing character: There is no ¦ in font pplr7t!
- [14])
-[15
 
-] (C:\Users\Wan\Desktop\TPAMI-MTD\TestCowork\grid_mtd_gq.aux)
+Underfull \vbox (badness 1308) has occurred while \output is active []
+
+) [13 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/robust-eps-converted-to.p
+df>]
+[14 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/visual-eps-converted-to.pdf
+>] (C:\Users\Wan\Desktop\TPAMI-MTD\TestCowork\grid_mtd_gq.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
@@ -796,11 +796,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6201 strings out of 495354
- 91210 string characters out of 3183858
- 167923 words of memory out of 3000000
- 9211 multiletter control sequences out of 15000+200000
- 58703 words of font info for 145 fonts, out of 3000000 for 9000
+ 6205 strings out of 495354
+ 91251 string characters out of 3183858
+ 167922 words of memory out of 3000000
+ 9213 multiletter control sequences out of 15000+200000
+ 59551 words of font info for 148 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
  44i,15n,42p,1815b,661s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1/p
@@ -825,9 +825,9 @@ KTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/palati
 no/uplbi8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/CTEX/MiK
 TeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/zapfdi
 ng/uzdr.pfb>
-Output written on grid_mtd_gq.pdf (15 pages, 1525598 bytes).
+Output written on grid_mtd_gq.pdf (14 pages, 1525813 bytes).
 PDF statistics:
- 455 PDF objects out of 1000 (max. 8388607)
+ 452 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
