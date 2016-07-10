@@ -26,19 +26,6 @@
     year = "1990",
 }
 
-@Article{mrf_ref:Delong12,
-author="Delong, Andrew
-and Osokin, Anton
-and Isack, Hossam N.
-and Boykov, Yuri",
-title="Fast Approximate Energy Minimization with Label Costs",
-journal="Int. J. Comput. Vision",
-year="2012",
-volume="96",
-number="1",
-pages="1-27",
-}
-
 @INPROCEEDINGS{mrf_ref:hart09,
   AUTHOR =    "Carr, P. and Hartley, R.",
   TITLE =        "Minimizing Energy Functions on 4-Connected Lattices Using Elimination",
@@ -79,7 +66,7 @@ pages="1-27",
 
 @ARTICLE{sp_ref:Fu14,
  author={H. Fu and X. Cao and D. Tang and Y. Han and D. Xu},
- journal={IEEE Trans. Multimedia},
+ journal={IEEE Transactions on Multimedia},
  title={Regularity Preserved Superpixels and Supervoxels},
  year={2014},
  volume={16},
@@ -141,31 +128,12 @@ pages={1356-1363},
 
 %% SP applications
 
-@INPROCEEDINGS{ps_ref:chang13,
-author={H. S. Chang and Y. C. F. Wang},
-booktitle={ICIP},
-title={Superpixel-based large displacement optical flow},
-year={2013},
-pages={},
-}
-
-@INPROCEEDINGS{ps_ref:george15,
-author={M. George},
-booktitle={CVPR},
-title={Image parsing with a wide range of classes and scene-level context},
-year={2015},
-pages={},
-}
-
-@Article{ps_ref:suppars13,
-author="Tighe, Joseph
-and Lazebnik, Svetlana",
-title="Superparsing",
-journal="Int. J. Comput. Vision",
-year="2013",
-volume="101",
-number="2",
-pages="329-349",
+@INPROCEEDINGS{ps_ref:suppars10,
+  AUTHOR = "Tighe, Joseph and Lazebnik, S.",
+  TITLE =    "SuperParsing: Scalable Nonparametric Image Parsing with Superpixels",
+  BOOKTITLE =    "ECCV",
+  YEAR =         "2010",
+  pages =        "",
 }
 
 @INPROCEEDINGS{sp_ref:occdec09,
@@ -208,22 +176,12 @@ pages="329-349",
   pages =        "",
 }
 
-@INPROCEEDINGS{ol:guo16,
-  AUTHOR = "Guo, Q. and Feng, W. and Zhou, C. and Wu, B.",
-  TITLE =     "Structure-Regularized Compressive Tracking",
-  BOOKTITLE =  "ICME",
-  YEAR =         "2016",
+@INPROCEEDINGS{ol:tuzel06,
+  AUTHOR = "Tuzel, O. and Porikli, F. and Meer, Peter",
+  TITLE =     "Region Covariance: A Fast Descriptor for Detection and Classification",
+  BOOKTITLE =  "ECCV",
+  YEAR =         "2006",
   pages =        "",
-}
-
-@ARTICLE{ol:zand16,
-author={M. Zand and S. Doraisamy and A. Abdul Halin and M. R. Mustaffa},
-journal={IEEE Trans. Image Process.},
-title={Ontology-Based Semantic Image Segmentation Using Mixture Models and Multiple CRFs},
-year={2016},
-volume={25},
-number={7},
-pages={3233-3248},
 }
 
 @INPROCEEDINGS{ol_ref:ess08,
@@ -272,7 +230,7 @@ pages={3233-3248},
 
 @article{ol_ref:odtip15,
  author={A. Iscen and G. Tolias and P. H. Gosselin and H. J¨¦gou},
- journal={IEEE Trans. Image Process.},
+ journal={IEEE Transactions on Image Processing},
  title={A Comparison of Dense Region Detectors for Image Search and Fine-Grained Classification},
  year={2015},
  volume={24},
@@ -282,7 +240,7 @@ pages={3233-3248},
 
 @ARTICLE{ol_ref:Zhang16,
  author={Z. Zhang and P. H. S. Torr},
- journal={IEEE Trans. Pattern Anal. Mach. Intell.},
+ journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
  title={Object Proposal Generation Using Two-Stage Cascade SVMs},
  year={2016},
  volume={38},
@@ -619,7 +577,7 @@ year = "2012"
 
 @ARTICLE{grid_effgc,
 author={Y. Lim and K. Jung and P. Kohli},
-journal={IEEE Trans. Pattern Anal. Mach. Intell.},
+journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
 title={Efficient Energy Minimization for Enforcing Label Statistics},
 year={2014},
 volume={36},

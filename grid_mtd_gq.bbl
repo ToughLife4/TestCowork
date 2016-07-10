@@ -39,6 +39,10 @@ S.~An, P.~Peursum, W.~Liu, and S.~Venkatesh, ``Efficient algorithms for
   subwindow search in object detection and localization,'' in \emph{CVPR},
   2009.
 
+\bibitem{ol:guo16}
+Q.~Guo, W.~Feng, C.~Zhou, and B.~Wu, ``Structure-regularized compressive
+  tracking,'' in \emph{ICME}, 2016.
+
 \bibitem{int_hist}
 F.~Porikli, ``Integral histogram: A fast way to extract histograms in cartesian
   spaces,'' in \emph{CVPR}, 2005.
@@ -66,10 +70,15 @@ P.~Felzenszwalb and D.~Huttenlocher, ``Efficient belief propagation for early
 P.~Carr and R.~Hartley, ``Minimizing energy functions on 4-connected lattices
   using elimination,'' in \emph{ICCV}, 2009.
 
+\bibitem{mrf_ref:Delong12}
+A.~Delong, A.~Osokin, H.~N. Isack, and Y.~Boykov, ``Fast approximate energy
+  minimization with label costs,'' \emph{Int. J. Comput. Vision}, vol.~96,
+  no.~1, pp. 1--27, 2012.
+
 \bibitem{grid_effgc}
 Y.~Lim, K.~Jung, and P.~Kohli, ``Efficient energy minimization for enforcing
-  label statistics,'' \emph{IEEE Transactions on Pattern Analysis and Machine
-  Intelligence}, vol.~36, no.~9, pp. 1893--1899, 2014.
+  label statistics,'' \emph{IEEE Trans. Pattern Anal. Mach. Intell.}, vol.~36,
+  no.~9, pp. 1893--1899, 2014.
 
 \bibitem{coseg_ref:rmcoseg12}
 J.~Rubio, J.~Serrat, A.~L\'{o}pez, and N.~Paragios, ``Unsupervised
@@ -79,9 +88,13 @@ J.~Rubio, J.~Serrat, A.~L\'{o}pez, and N.~Paragios, ``Unsupervised
 S.~Vicente, C.~Rother, and V.~Kolmogorov, ``Object cosegmentation,'' in
   \emph{CVPR}, 2011.
 
-\bibitem{ps_ref:suppars10}
-J.~Tighe and S.~Lazebnik, ``Superparsing: Scalable nonparametric image parsing
-  with superpixels,'' in \emph{ECCV}, 2010.
+\bibitem{ps_ref:suppars13}
+J.~Tighe and S.~Lazebnik, ``Superparsing,'' \emph{Int. J. Comput. Vision}, vol.
+  101, no.~2, pp. 329--349, 2013.
+
+\bibitem{ps_ref:george15}
+M.~George, ``Image parsing with a wide range of classes and scene-level
+  context,'' in \emph{CVPR}, 2015.
 
 \bibitem{ps_ref:gould09}
 S.~Gould, T.~Gao, and D.~Koller, ``Region-based segmentation and object
@@ -91,10 +104,19 @@ S.~Gould, T.~Gao, and D.~Koller, ``Region-based segmentation and object
 J.~Yan, Y.~Yu, X.~Zhu, Z.~Lei, and S.~Z. Li, ``Object detection by labeling
   superpixels,'' in \emph{CVPR}, 2015, pp. 5107--5116.
 
+\bibitem{ol:zand16}
+M.~Zand, S.~Doraisamy, A.~A. Halin, and M.~R. Mustaffa, ``Ontology-based
+  semantic image segmentation using mixture models and multiple crfs,''
+  \emph{IEEE Trans. Image Process.}, vol.~25, no.~7, pp. 3233--3248, 2016.
+
 \bibitem{sp_ref:spflow12}
 T.~Brox and J.~Malik, ``Large displacement optical flow: Descriptor matching in
   variational motion estimation,'' \emph{IEEE Trans. Pattern Anal. Mach.
   Intell.}, vol.~33, no.~3, pp. 500--513, 2011.
+
+\bibitem{ps_ref:chang13}
+H.~S. Chang and Y.~C.~F. Wang, ``Superpixel-based large displacement optical
+  flow,'' in \emph{ICIP}, 2013.
 
 \bibitem{sp_seeds}
 M.~V. den Bergh, X.~Boix, G.~Roig, B.~de~Capitani, and L.~V. Gool, ``{SEEDS}:
@@ -125,13 +147,12 @@ P.~Felzenszwalb and D.~Huttenlocher, ``Efficient graph-based image
 \bibitem{ol_ref:odtip15}
 A.~Iscen, G.~Tolias, P.~H. Gosselin, and H.~J¨¦gou, ``A comparison of dense
   region detectors for image search and fine-grained classification,''
-  \emph{IEEE Transactions on Image Processing}, vol.~24, no.~8, pp. 2369--2381,
-  2015.
+  \emph{IEEE Trans. Image Process.}, vol.~24, no.~8, pp. 2369--2381, 2015.
 
 \bibitem{sp_ref:Fu14}
 H.~Fu, X.~Cao, D.~Tang, Y.~Han, and D.~Xu, ``Regularity preserved superpixels
-  and supervoxels,'' \emph{IEEE Transactions on Multimedia}, vol.~16, no.~4,
-  pp. 1165--1175, 2014.
+  and supervoxels,'' \emph{IEEE Trans. Multimedia}, vol.~16, no.~4, pp.
+  1165--1175, 2014.
 
 \bibitem{sp_grid:Neubert16}
 P.~Neubert and P.~Protzel, ``Beyond holistic descriptors, keypoints, and fixed
@@ -166,8 +187,8 @@ A.~Gonzalez-Garcia, A.~Vezhnevets, and V.~Ferrari, ``An active search strategy
 
 \bibitem{ol_ref:Zhang16}
 Z.~Zhang and P.~H.~S. Torr, ``Object proposal generation using two-stage
-  cascade svms,'' \emph{IEEE Transactions on Pattern Analysis and Machine
-  Intelligence}, vol.~38, no.~1, pp. 102--115, 2016.
+  cascade svms,'' \emph{IEEE Trans. Pattern Anal. Mach. Intell.}, vol.~38,
+  no.~1, pp. 102--115, 2016.
 
 \bibitem{l1graph10}
 B.~Cheng, J.~Yang, S.~Yan, and T.~Huang, ``Learning with {L1}-graph for image

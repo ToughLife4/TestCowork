@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.23)  10 JUL 2016 09:27
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.23)  10 JUL 2016 15:29
 entering extended mode
 **C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/grid_mtd_gq.tex
 (C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/grid_mtd_gq.tex
@@ -459,11 +459,6 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 70.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <14> not available
 (Font)              Font shape `OT1/phv/b/sc' tried instead on input line 70.
-
-Underfull \hbox (badness 1460) in paragraph at lines 75--78
-\OT1/ppl/m/n/12 in solv-ing vari-a-tion-al and low-level vi-sion
- []
-
 Package epstopdf Info: Source file: <figs/figure1_v4.eps>
 (epstopdf)                    date: 2016-07-09 09:16:03
 (epstopdf)                    size: 11851280 bytes
@@ -474,6 +469,7 @@ Package epstopdf Info: Source file: <figs/figure1_v4.eps>
 ed-to.pdf figs/figure1_v4.eps>
 (epstopdf)             \includegraphics on input line 82.
 Package epstopdf Info: Output file is already uptodate.
+
 <figs/figure1_v4-eps-converted-to.pdf, id=1, 696.6025pt x 467.7475pt>
 File: figs/figure1_v4-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -777,16 +773,23 @@ Package pdftex.def Info: figs/visual-eps-converted-to.pdf used on input line 51
 (C:\Users\Wan\Desktop\TPAMI-MTD\TestCowork\grid_mtd_gq.bbl
 Underfull \vbox (badness 2689) has occurred while \output is active []
 
- [12]
+
+Underfull \hbox (badness 1931) in paragraph at lines 108--111
+\OT1/ppl/m/n/9 ``Ontology-based se-man-tic im-age seg-men-ta-tion us-ing
+ []
+
+[12]
 Missing character: There is no ¨ in font pplr7t!
 Missing character: There is no ¦ in font pplr7t!
 
 Underfull \vbox (badness 1308) has occurred while \output is active []
 
-) [13 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/robust-eps-converted-to.p
-df>]
-[14 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/visual-eps-converted-to.pdf
->] (C:\Users\Wan\Desktop\TPAMI-MTD\TestCowork\grid_mtd_gq.aux)
+ [13 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/robust-eps-converted-to.pd
+f>] [14 <C:/Users/Wan/Desktop/TPAMI-MTD/TestCowork/figs/visual-eps-converted-to
+.pdf>])
+[15
+
+] (C:\Users\Wan\Desktop\TPAMI-MTD\TestCowork\grid_mtd_gq.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
@@ -796,10 +799,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6205 strings out of 495354
- 91251 string characters out of 3183858
- 167922 words of memory out of 3000000
- 9213 multiletter control sequences out of 15000+200000
+ 6210 strings out of 495354
+ 91323 string characters out of 3183858
+ 168942 words of memory out of 3000000
+ 9218 multiletter control sequences out of 15000+200000
  59551 words of font info for 148 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
  44i,15n,42p,1815b,661s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -825,9 +828,9 @@ KTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/palati
 no/uplbi8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/CTEX/MiK
 TeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/zapfdi
 ng/uzdr.pfb>
-Output written on grid_mtd_gq.pdf (14 pages, 1525813 bytes).
+Output written on grid_mtd_gq.pdf (15 pages, 1526888 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
+ 455 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
