@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc}
+
+\begin{document}
+  \begin{tikzpicture}
+  
+    \node[inner sep=0] (slic) at (0,0){
+      \includegraphics[width=\linewidth]{params_slic.pdf}
+    };
+    \node[inner sep=0,below left=5em and 1.1em of slic.west] {(a)};
+    \node[inner sep=0,below left=0em and -34.35em of slic] (egs) {
+        \includegraphics[width=\linewidth,origin=c]{params_egs.pdf}
+      };
+    \node[inner sep=0,below left=4em and 0.8em of egs.west] {(b)};
+  \end{tikzpicture}
+\end{document}
+
+
+\write18{del *.aux}
+\write18{del *.log}
+\write18{del *.gz} 
